@@ -1,29 +1,36 @@
+
+body{
+margin:  0 100px;
+}
 .navbar{
-    background-color: aqua;
-    font-size: 9px;
-    width:1000px;
+    background-color: rgb(253, 255, 255);
+    font-size: 15px;
+    width:100%;
     height: 50px;
     margin: 8px;
     color: black;
     display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
     
-}
-.button-nav{
-    margin:8px;
-    padding:9px;
-    border-radius: 10px;
 }
 
 /* hero */
 .hero{
     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAYKFRxdYXCyZt_R25M0l0iIeR5scEOFHZlpc8u9OgTxrFXOc3-Pao9oAmpyvRDmWm12RBnkIPmO5cO2VwlIcoxfm77ZkIxQqOTxF66kOCh4g8oq1D4Vp26xNa0Xqliv8jsOsfBUCDtH8doz2Rq-AUG4kMMh88mxlR9E6xCavVU3rcf0jU5VF3YYVThsHTLtcuLwnZXh4_QIeX-9hPy6lTJTcz0xLX3-WITTdYMESn1XfVbay2yEy4r1p-CP_5UdkMlG2cjR57_ueY);
-     background-color: azure;
-background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 100% 100%;
 text-align: center;
 padding:9px ;
 height:450px;
-width: 900px;
+width: 100%;
 color: azure;
+display: flex;
+justify-content:center;
+align-items: center;
+flex-direction: column;
 }
 
 .button-hero{
@@ -32,6 +39,9 @@ color: azure;
     padding: 12px;
     border: 1px;
  border-radius: 10px;
+ width: 200px;
+ height: 40px;
+ 
  
 }
 
@@ -42,12 +52,104 @@ color: azure;
 
 /* footer */
 
-.footer{
+ ul{
+    padding-top: 40px;
     display: flex;
-    text-align: center;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+
 
 }
 
-.border{
-    border: 3px solid rgb(4, 97, 21);
+
+
+.liste{
+    list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+ .service{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   padding-top: 30px;
+}
+
+.paragraph{
+    width: 90%;
+}
+img{
+    width: 300px;
+    height: 170px;
+    border-radius: 7px;
+}
+
+.logo svg{
+    width: 20px;
+    height: 20px;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  body {
+    margin: 0 20px; 
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .liste {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 10px;
+    background-size: cover;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero h4 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .service {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+
+  .button-hero {
+    width: 100%;
+    max-width: 250px;
+  }
 }
